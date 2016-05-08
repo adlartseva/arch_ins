@@ -1,0 +1,14 @@
+#!/bin/bash
+pacstrap /mnt base base-devel
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+passwd
+mkinitcpio -p linux
+pacman -S grub os-prober
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
+exit
+umount /mnt -R
+reboot
