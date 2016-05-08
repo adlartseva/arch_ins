@@ -5,7 +5,6 @@ useradd -m -G wheel -s /bin/bash kosha
 passwd kosha
 echo sob2vain > /etc/hostname
 cat /etc/hostname
-systemctl enable dhcpcd
 EDITOR=nano visudo
 nano /etc/hosts
 mv /arch_ins/bash_root /root/.bashrc
