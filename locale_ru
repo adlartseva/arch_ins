@@ -20,4 +20,3 @@ export LANG=ru_RU.UTF-8
 nano /etc/mkinitcpio.conf
 mkinitcpio -p linux
 grub-mkconfig - /boot/grub/grub.cfg
-reboot
