@@ -19,4 +19,4 @@ localectl set-locale LANG="ru_RU.UTF-8"
 export LANG=ru_RU.UTF-8
 nano /etc/mkinitcpio.conf
 mkinitcpio -p linux
-grub-mkconfig - /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
