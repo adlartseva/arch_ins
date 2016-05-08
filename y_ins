@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -S fontconfig-infinality-ultimate
+sudo pacman -S fontconfig-infinality-ultimate firefox-i18n-ru firefox
 cd /etc/fonts/conf.d
 sudo ln -s ../conf.avail.infinality/36-repl-missing-glyphs.conf .
 sudo fc-presets set
@@ -8,12 +8,3 @@ sudo fc-cache -fr
 yaourt -S nano-syntax-highlighting-git
 cat /usr/share/nano-syntax-highlighting/nanorc.sample | xargs -0 echo >> ~/.nanorc
 sudo ln -s /home/username/.nanorc /root/.nanorc
-yaourt -S pamac-aur firefox-gtk2 sublime-text-dev engrampa-thunar grub-customizer gxneur
-sudo pacman -S firefox-i18n-ru flashplugin leafpad xfce4-whiskermenu-plugin p7zip unrar zip unzip
-yaourt -S bomi 2gis dropbox megasync mailru-cloud teamviewer i-nex
-sudo pacman -S steam gparted cherrytree transmission-gtk skype simplescreenrecorder pinta galculator
-sudo pacman -S variety htop libreoffice-fresh libreoffice-fresh-ru gimp
-sudo pacman -S numix-themes
-yaourt -S numix-circle-icon-theme-git vertex-icons-git papirus-icons-git
-yaourt -S vertex-themes gtk-theme-arc xcursor-menda-git xcursor-maia gtk-theme-config
-reboot
