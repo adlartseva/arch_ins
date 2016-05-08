@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mv /arch_ins/bash_root /root/.bashrc
-mv /arch_ins/.bashrc /home/kosha/
+mv arch_ins/bash_root /root/.bashrc
+mv arch_ins/.bashrc /home/kosha/
 chown kosha /home/kosha/.bashrc
 chmod +x /arch_ins/locale_ru
