@@ -1,13 +1,13 @@
 #!/bin/bash
-chmod +x /arch_ins/mirrors
-chmod +x /arch_ins/up-grub
-mv /arch_ins/mirrors /usr/bin/
-mv /arch_ins/up-grub /usr/bin/
+chmod +x arch_ins/mirrors
+chmod +x arch_ins/up-grub
+mv arch_ins/mirrors /usr/bin/
+mv arch_ins/up-grub /usr/bin/
 echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
 echo en_US ISO-8859-1 >> /etc/locale.gen
-echo ru_RU.KOI-8859-2 >> /etc/locale.gen
+echo ru_RU.KOI8-R KOI8-R >> /etc/locale.gen
 echo ru_RU.UTF-8 UTF-8 >> /etc/locale.gen
-echo ru_US ISO-8859-5 >> /etc/locale.gen
+echo ru_RU.KOI8-R KOI8-R >> /etc/locale.gen
 locale-gen
 locale > /etc/locale.conf
 cat /etc/locale.conf
