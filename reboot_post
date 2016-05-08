@@ -1,0 +1,18 @@
+#!/bin/bash
+sudo nano /etc/pacman.conf
+sudo pacman -Syu mlocate bash-completion
+sudo pacman -S xorg-xinit xorg-server xorg-server-utils xorg-utils xterm
+sudo pacman -S alsa-utils pulseaudio pulseaudio-alsa pavucontrol libcanberra-pulse ponymix
+sudo pacman -S xfce4 xfce4-goodies
+echo exec startxfce4 > /home/kosha/.xinitrc
+sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sudo sysemctl enable lightdm.service
+sudo pacman -S yaourt
+sudo pacman -S networkmanager network-manager-applet dhclient
+sudo systemctl enable NetworkManager.service
+sudo pacman -S ttf-liberation ttf-bitstream-vera ttf-dejavu cantarell-fonts gvfs ntfs-3g xdg-user-dirs meld guvcview
+xdg-user-dirs-update
+sudo nano /etc/pacman.conf
+sudo pacman -Syy
+sudo pacman -S freetype-infinality-ultimate lib32-freetype-infinality-ultimate
+reboot

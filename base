@@ -1,14 +1,9 @@
 #!/bin/bash
+pacman -Syy
+pacman -S reflector
+cp -vf /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+reflector -c 'Russia' -f 12 -l 12 -n 12 --verbose --save /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel
 genfstab -U /mnt >> /mnt/etc/fstab
+cat /mnt/etc/fstab
 arch-chroot /mnt
-passwd
-mkinitcpio -p linux
-pacman -S grub os-prober
-grub-install /dev/sda
-grub-mkconfig -o /boot/grub/grub.cfg
-
-
-exit
-umount /mnt -R
-reboot
